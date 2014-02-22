@@ -1,9 +1,9 @@
 {
-  "name": "Dabawalas-Blog",
+  "name": "MNC-Theme",
   "version": "1.2.0",
-  "homepage": "http://blog.dabawalas.com",
+  "homepage": "http://matiasmancini.com.ar/wp-mnc",
   "description": "",
-  "repository": "",
+  "repository": "https://github.com/matmancini/wp-mnc",
   "author": "Matias Mancini (http://matiasmancini.com.ar/)",
   "license": "null",
   "readmeFilename": "",
