@@ -111,6 +111,27 @@ add_filter( 'body_class', function($classes) {
 });
 
 /**
+ * Adds body class with catecory name to single post
+ */
+add_filter('body_class', function ($classes) {
+
+    if (is_single()) {
+
+        global $post;
+
+        foreach((get_the_category($post->ID)) as $category) {
+            // add category slug to the $classes array
+            $classes[] = $category->category_nicename;
+        }
+    }
+
+    // return the $classes array
+    return $classes;
+
+});
+
+
+/**
  * Remove the #id from the "read more" link
  */
 add_filter('the_content_more_link', function($link){
