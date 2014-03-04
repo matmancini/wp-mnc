@@ -113,7 +113,8 @@ module.exports = function(grunt) {
 					'jQuery': true,
 					'Modernizr': true,
 					'console': true,
-					'MNC': true
+					'MNC': true,
+					'require': true
 				}
 			},
 			gruntfile: {
@@ -148,14 +149,8 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// These plugins provide necessary tasks.
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	// load all grunt tasks matching the `grunt-*` pattern
+	require('load-grunt-tasks')(grunt);
 
 	// Default task.
 	grunt.registerTask('build', ['jshint', 'clean', 'sass', 'copy', 'concat', 'uglify']);
