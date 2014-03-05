@@ -128,7 +128,10 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: ['src/scss/*.scss'],
-				tasks: ['sass:dev']
+				tasks: ['sass:dev'],
+				options: {
+					livereload: true
+				},
 			},
 			jsLib: {
 				files: ['src/js/lib/*.*'],
