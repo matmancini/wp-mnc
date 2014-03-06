@@ -1,9 +1,9 @@
 /* _base.scss */
 
-* {
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box;
+*,
+*:before,
+*:after {
+	@include borderRadius();
 }
 
 a {
