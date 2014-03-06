@@ -1,1 +1,50 @@
 /* _mixins.scss */
+
+// Clearfix
+@mixin clearfix() {
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+}
+
+// Border radius
+@mixin borderRadius($radius: 2px) {
+
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+
+}
+
+// Box Sizing
+@mixin boxSizing($boxModel) {
+
+	-moz-box-sizing: $boxModel;
+	-webkit-box-sizing: $boxModel;
+	box-sizing: $boxModel;
+
+}
+
+// Retina imgs
+@mixin media-query-2x() {
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+
+		@content;
+
+	}
+
+}
