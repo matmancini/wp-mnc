@@ -129,9 +129,6 @@ module.exports = function(grunt) {
 			css: {
 				files: ['src/scss/*.scss'],
 				tasks: ['sass:dev'],
-				options: {
-					livereload: true
-				},
 			},
 			jsLib: {
 				files: ['src/js/lib/*.*'],
@@ -148,6 +145,10 @@ module.exports = function(grunt) {
 			gruntfile: {
 				files: 'Gruntfile.js',
 				tasks: ['jshint:gruntfile']
+			},
+			livereload: {
+				files: ['dist/css/*.css'],
+				options: { livereload: true	},
 			}
 		}
 	});
